@@ -22,10 +22,15 @@ class Style03: UITableViewCell,CellProtocol {
      
         
         let flow = UICollectionViewFlowLayout()
-        flow.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//        flow.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        flow.estimatedItemSize = CGSize(width: 100, height: 50)
+        flow.minimumLineSpacing = 0
+        flow.minimumInteritemSpacing = 0
+        
         flow.scrollDirection = .vertical
         let table = CCollection.init(frame: CGRect.zero, collectionViewLayout: flow)
 //        table.alwaysBounceVertical = true
+       
         self.contentView.addSubview(table)
 
         table.snp.makeConstraints { (make) in
@@ -33,7 +38,7 @@ class Style03: UITableViewCell,CellProtocol {
             )
             make.left.equalTo(0)
             make.right.equalTo(0)
-            make.height.equalTo(100)
+            make.height.equalTo(200)
             make.bottom.equalTo(-60)
 
         }
@@ -69,10 +74,15 @@ class Style03: UITableViewCell,CellProtocol {
                 
             }
             
-            arrayVue.v_array(true, v: { () -> Array<VueData>? in
+            arrayVue.v_array(false, v: { () -> Array<VueData>? in
                 
                 return array
             })
+            
+            indexVue.v_index { (index) in
+                
+                print(index)
+            }
             
           
             

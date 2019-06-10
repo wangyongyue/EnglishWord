@@ -44,7 +44,20 @@ class TestCell: UICollectionViewCell,CellProtocol{
         tap.v_on(vue: tapVue)
         
     }
-    
+
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
+
+        let size = self.contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var cellFrame = layoutAttributes.frame
+        cellFrame.size.height = 50
+        if let count = label.text?.count{
+            cellFrame.size.width = CGFloat(count) * 12.0
+        }
+        layoutAttributes.frame = cellFrame
+        return layoutAttributes
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

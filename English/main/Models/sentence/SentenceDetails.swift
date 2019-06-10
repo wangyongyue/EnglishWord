@@ -46,6 +46,10 @@ class SentenceDetails: NSObject, DetailsProtocol {
             m.name = dic["content_en"] as! String
             array.append(m)
             
+            let zhm = Style02Model()
+            zhm.name = dic["content_zh"] as! String
+            array.append(zhm)
+            
         }
         
         arrayVue.v_array(true, v: { () -> Array<VueData>? in
