@@ -16,6 +16,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let  SentenceVC  = Sentence().getViewController()
+        let SentenceNav = UINavigationController(rootViewController:SentenceVC)
+        SentenceNav.tabBarItem.title = "例句"
+        
+        let  ArticleVC  =  Article().getViewController()
+        let ArticleNav = UINavigationController(rootViewController:ArticleVC)
+        ArticleNav.tabBarItem.title = "短文"
+        
+        
+        let  MovieVC  = Movie().getViewController()
+        let MovieNav = UINavigationController(rootViewController:MovieVC)
+        MovieNav.tabBarItem.title = "电影"
+      
+        
+        let tabBar = UITabBarController()
+        // 添加工具栏
+        let items = [SentenceNav,ArticleNav,MovieNav]
+        tabBar.viewControllers = items
+        
+        //tabBar 底部工具栏背景颜色 (以下两个都行)
+        tabBar.tabBar.barTintColor = UIColor.white
+        tabBar.tabBar.backgroundColor = UIColor.white
+        
+        
+        self.window?.rootViewController = tabBar;
+        self.window?.makeKeyAndVisible();
+        
+        
+        
+        
+        
         return true
     }
 
