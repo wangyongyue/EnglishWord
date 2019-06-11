@@ -1,0 +1,18 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"You make millions of decisions that mean nothing and then one day your order takes out and it changes your life.",
+            "content_zh":"你每天都在做很多看起来毫无意义的决定，但某天你的某个决定就能改变你的一生。"
+        },
+        {
+            "content_en":"Destiny is something we’ve invented because we can’t stand the fact that happens is accidental.",
+            "content_zh":"所谓命运不过是托辞，因为我们无法忍受所有事情的发生都是偶然的这样的事实。"
+        },
+        {
+            "content_en":"Yesterday is history. Tomorrow is a mystery, but today is a gift. That is why it is called the present.",
+            "content_zh":"昨天是历史，明天是谜团。但今天是礼物，那就是为什么它被称为present（礼物）。"
+        }
+        
+    ]
+}

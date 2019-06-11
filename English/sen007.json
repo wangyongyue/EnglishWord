@@ -1,0 +1,14 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"I wonder if you could help me, I'm looking for a room.",
+            "content_zh":"你可以帮我吗？我正在找一间房子。"
+        },
+        {
+            "content_en":"Well, I have got a vacancy.",
+            "content_zh":"嗯，我有一间空房。"
+        }
+    ]
+}
+

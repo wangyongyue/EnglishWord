@@ -17,8 +17,10 @@ class ArticleDetails: NSObject , DetailsProtocol {
     func startListen() {
         
         
-        loadData()
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute:{
+            self.loadData()
+
+        })
         indexVue.v_index { (index) in
             
 
@@ -30,21 +32,25 @@ class ArticleDetails: NSObject , DetailsProtocol {
         
         let vc = DetailsVC()
         vc.m = self
-        vc.navigationItem.title = "例句"
         return vc
         
     }
     
     func loadData(){
         
-        let data  = Resources.getArrayForJson("sentenceDetails")
+        let number = Router.currentController().params?["id"] as! Int
+        let data  = Resources.getArrayForJson("art00\(number)")
         
         var array = Array<VueData>()
         for value in data{
             let dic = value as! NSDictionary
-            let m = Style02Model()
+            let m = Style03Model()
             m.name = dic["content_en"] as! String
             array.append(m)
+            
+            let zhm = Style02Model()
+            zhm.name = dic["content_zh"] as! String
+            array.append(zhm)
             
         }
         
@@ -52,7 +58,6 @@ class ArticleDetails: NSObject , DetailsProtocol {
             
             return array
         })
-        
         
         
     }

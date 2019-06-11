@@ -1,0 +1,32 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"Good morning，lady.",
+            "content_zh":"早上好，女士。"
+        },
+        {
+            "content_en":"Good morning,.How are you this morning?",
+            "content_zh":"早上好，今早你好吗？"
+        },
+        {
+            "content_en":"I'm very fine.Did you sleep well last night?",
+            "content_zh":"我很好。昨晚你睡得好吗？"
+        },
+        {
+            "content_en":"Yes,I did.Thank you.",
+            "content_zh":"是的，我睡得很好。谢谢你。"
+        },
+        {
+            "content_en":"Would you like coffee or tea this morning?",
+            "content_zh":"你喜欢喝茶还是咖啡呢？"
+        },
+        {
+            "content_en":"Coffee,please.Make it real hot.",
+            "content_zh":"咖啡，热一点儿。"
+        }
+        
+        
+    ]
+}
+

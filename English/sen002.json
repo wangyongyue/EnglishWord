@@ -1,0 +1,27 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"Breakfast is ready! It's time to eat.",
+            "content_zh":"早餐好了，该吃饭啦!"
+        },
+        {
+            "content_en":"Finally.",
+            "content_zh":"终于好啦！"
+        },
+        {
+            "content_en":"Did you wash your hands well?",
+            "content_zh":"手洗干净了吗？"
+        },
+        {
+            "content_en":"Yes,I will eat all of vegetables.",
+            "content_zh":"洗啦，我耀把蔬菜吃光光！"
+        },
+        {
+            "content_en":"OK,Don't be picky.",
+            "content_zh":"棒！不许挑食。"
+        }
+        
+    ]
+}
+

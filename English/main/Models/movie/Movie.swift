@@ -20,7 +20,7 @@ class Movie:NSObject, HomeProtocol {
         
         indexVue.v_index { (index) in
             
-            Router.push(MovieDetails().getViewController(), ["id":"10"], nil)
+            Router.push(MovieDetails().getViewController(), ["id":index + 1], nil)
         }
         
     }
@@ -36,7 +36,7 @@ class Movie:NSObject, HomeProtocol {
     
     func loadData(){
         
-        let data  = Resources.getArrayForJson("sentence")
+        let data  = Resources.getArrayForJson("movie")
         
         var array = Array<VueData>()
         for value in data{

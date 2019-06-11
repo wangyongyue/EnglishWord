@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let  SentenceVC  = Sentence().getViewController()
         let SentenceNav = UINavigationController(rootViewController:SentenceVC)
-        SentenceNav.tabBarItem.title = "例句"
+        SentenceNav.tabBarItem.title = "消息"
         
         let  ArticleVC  =  Article().getViewController()
         let ArticleNav = UINavigationController(rootViewController:ArticleVC)

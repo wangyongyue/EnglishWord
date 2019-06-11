@@ -1,0 +1,44 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"Time is grain for peasants",
+            "content_zh":"对农民来说，时间就是粮食。"
+        },
+        {
+            "content_en":"Time is wealth for workers.",
+            "content_zh":"对工人来说，时间就是财富。"
+        },
+        {
+            "content_en":"Time is life for doctors.",
+            "content_zh":"对医生来说，时间就是生命。"
+        },
+        {
+            "content_en":"Time is victory for soldiers.",
+            "content_zh":"对士兵来说，时间就是胜利。"
+        },
+        {
+            "content_en":"Time is knowledge for students.",
+            "content_zh":"对学生来说，时间就是知识。"
+        },
+        {
+            "content_en":"Time is speed for scientists.",
+            "content_zh":"对科学家来说，时间就是速度。"
+        },
+        {
+            "content_en":"Time is money for businessmen.",
+            "content_zh":"对企业家来说，时间就是金钱。"
+        },
+        {
+            "content_en":" Time is everything for all of us.",
+            "content_zh":"对我们大家来说，时间就是一切。"
+        },
+        {
+            "content_en":"Therefore, seize the time of today!",
+            "content_zh":"因此，把握今天!"
+        }
+        
+        
+    ]
+}
+

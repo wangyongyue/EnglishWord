@@ -1,0 +1,24 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"I don’t know if we each have a destiny, or if we’re all just floating around accident alike on a breeze.",
+            "content_zh":"我不懂，是我们有着各自不同的命运，还是，我们只不过都是在风中茫然飘荡。"
+        },
+        {
+            "content_en":"Life was a box of chocolates, you never know what you’re gonna get.",
+            "content_zh":"生活就像一盒巧克力，你永远不知道下一块会是什么味道。"
+        },
+        {
+            "content_en":"Death is just a part of life, something we’re all destined to do.",
+            "content_zh":" 死亡是生命的一部分，是我们注定要做得一件事。"
+        },
+        {
+            "content_en":"There’s only so much fortune a man really needs, and the rest is just for showing off.",
+            "content_zh":"人真正需要的财富只有那么一些了，剩下的只不过是用来炫耀罢了。"
+        }
+        
+      
+        
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"How many rooms are you looking for?",
+            "content_zh":"你们想找多少个房间？"
+        },
+        {
+            "content_en":"Oh, four or five. How much is the rent for this apartment?",
+            "content_zh":"噢，四或五。这间公寓的租金是多少？"
+        }
+        
+    ]
+}
+

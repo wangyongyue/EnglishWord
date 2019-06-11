@@ -1,0 +1,22 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"Everything you see exists together in a delicate balance.",
+            "content_zh":"世界上所有的生命都在微妙的平衡中生存。"
+        },
+        {
+            "content_en":"I’m only brave when I have to be. Being brave doesn’t mean you go looking for trouble.",
+            "content_zh":"我只是在必要的时候才会勇敢，勇敢并不代表你要到处闯祸。"
+        },
+        {
+            "content_en":"Yes, the past can hurt. But I think you can either run from it or learn from it.",
+            "content_zh":"我只是在必要的时候才会勇敢，勇敢并不代表你要到处闯祸。"
+        },
+        {
+            "content_en":"Yes, the past can hurt. But I think you can either run from it or learn from it.",
+            "content_zh":"对，过去是痛楚的，但我认为你要么可以逃避，要么可以从中学习。"
+        }
+        
+    ]
+}

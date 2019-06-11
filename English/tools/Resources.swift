@@ -33,3 +33,22 @@ class Resources: NSObject {
     
 
 }
+extension String{
+    
+    
+    func getHeightForString(font:UIFont,w:CGFloat) -> CGFloat{
+       
+        let attributes = [NSAttributedString.Key.font:font]
+        let option = NSStringDrawingOptions.usesLineFragmentOrigin
+        let rect:CGRect = self.boundingRect(with: CGSize.init(width: w, height:  CGFloat(MAXFLOAT)), options: option, attributes: attributes, context: nil)
+        return rect.size.height
+    }
+    func getWithForString(font:UIFont) -> CGFloat{
+        
+        let attributes = [NSAttributedString.Key.font:font]
+        let option = NSStringDrawingOptions.usesLineFragmentOrigin
+        let rect:CGRect = self.boundingRect(with: CGSize.init(width: CGFloat(MAXFLOAT), height:  CGFloat(MAXFLOAT)), options: option, attributes: attributes, context: nil)
+        return rect.size.width
+    }
+    
+}

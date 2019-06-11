@@ -1,0 +1,15 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"Hello, May I help you?",
+            "content_zh":"你好，我可以帮你吗？"
+        },
+        {
+            "content_en":"Yes, we're interested in seeing the rooms for rent.",
+            "content_zh":"是的，我们有兴趣看看要出租的房间。"
+        }
+        
+    ]
+}
+

@@ -1,30 +1,31 @@
 //
-//  DetailsVC.swift
+//  BottomView.swift
 //  English
 //
-//  Created by apple on 2019/6/10.
+//  Created by apple on 2019/6/11.
 //  Copyright © 2019 wyy. All rights reserved.
 //
 
 import UIKit
+
 import VueSwift
 import SnapKit
-class DetailsVC: UIViewController {
 
-    var m:DetailsProtocol?
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class BottomView: UIView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    init(m:BottomViewProtocol) {
+        super.init(frame: UIScreen.main.bounds)
         
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.white
-        
+        self.backgroundColor = UIColor.gray.withAlphaComponent(0.4)
         
         let table = CTable()
         table.estimatedRowHeight = 44.0
         table.rowHeight = UITableView.automaticDimension
-        self.view.addSubview(table)
+        self.addSubview(table)
         table.snp.makeConstraints { (make) in
-            make.top.equalTo(64)
+            make.height.equalTo(200)
             make.left.equalTo(0)
             make.right.equalTo(0)
             make.bottom.equalTo(0)
@@ -37,27 +38,35 @@ class DetailsVC: UIViewController {
                         RightCell.classForCoder(),
                         RightENCell.classForCoder(),
                         LeftENCell.classForCoder()
-
+            
             ])
         
-        if let v = m?.arrayVue{
-            table.v_array(vue: v)
-            
+        table.v_array(vue: m.arrayVue)
+        table.v_index(vue: m.indexVue)
+        
+        let tap = UITapGestureRecognizer()
+        self.addGestureRecognizer(tap)
+        tap.v_on(vue: m.tapVue)
+        tap.v_tap {
+        
+            self.removeFromSuperview()
         }
         
-        if let v = m?.indexVue{
-            table.v_index(vue: v)
-        }
+        m.startListen()
         
-        m?.startListen()
     }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+   
     
 }
-protocol DetailsProtocol {
+protocol BottomViewProtocol {
     
     var arrayVue:Vue{get}
     var indexVue:Vue{get}
+    var tapVue:Vue{get}
+
     func startListen()
     
 }
-

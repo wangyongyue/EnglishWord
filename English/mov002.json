@@ -1,0 +1,20 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"After all, tomorrow is another day!",
+            "content_zh":"不管怎样，明天是新的一天！"
+        },
+        {
+            "content_en":"I think it’s hard winning a war with words.",
+            "content_zh":"我认为纸上谈兵没有什么用。"
+        },
+        {
+            "content_en":"You’re throwing away happiness with both hands, and reaching out for something that will never make you happy.",
+            "content_zh":"你把自己的幸福拱手相让，去追求一些根本不会让你幸福的东西。"
+        }
+        
+        
+        
+    ]
+}

@@ -1,19 +1,21 @@
 //
-//  Style02.swift
+//  RightCell.swift
 //  English
 //
-//  Created by apple on 2019/6/10.
+//  Created by apple on 2019/6/11.
 //  Copyright © 2019 wyy. All rights reserved.
 //
 
 import UIKit
+
+
 import VueSwift
-class Style02: UITableViewCell,CellProtocol {
+class RightCell: UITableViewCell,CellProtocol {
     
     let label:UILabel = {
         let a = UILabel()
         a.textColor = UIColor.black
-        a.textAlignment = .left
+        a.textAlignment = .right
         return a
     }()
     let tap = UITapGestureRecognizer()
@@ -29,10 +31,10 @@ class Style02: UITableViewCell,CellProtocol {
         
         label.numberOfLines = 0
         label.snp.makeConstraints { (make) in
-            make.top.equalTo(12)
-            make.left.equalTo(12)
+            make.top.equalTo(0)
+            make.left.equalTo(50)
             make.right.equalTo(-12)
-            make.bottom.equalTo(-40)
+            make.bottom.equalTo(-6)
             
         }
         
@@ -48,9 +50,9 @@ class Style02: UITableViewCell,CellProtocol {
     }
     func setModel(_ amodel: VueData) {
         
-        if amodel is Style02Model{
+        if amodel is RightModel{
             
-            let h = amodel as! Style02Model
+            let h = amodel as! RightModel
             
             textVue.v_text { () -> String? in
                 
@@ -66,9 +68,9 @@ class Style02: UITableViewCell,CellProtocol {
     }
     
 }
-class Style02Model:VueData{
+class RightModel:VueData{
     
-    var v_palm: String = "Style02"
+    var v_palm: String = "RightCell"
     var v_identifier:Int = 0
     var v_selectVue:Vue = Vue()
     

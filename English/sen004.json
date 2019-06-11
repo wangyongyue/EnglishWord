@@ -1,0 +1,31 @@
+{
+    "type": "MultiPolygon",
+    "data": [
+        {
+            "content_en":"Mrs. wu, would you care for another helping?",
+            "content_zh":"吴小姐，还要再来一点吗？"
+        },
+        {
+            "content_en":"No more, thank you. I'm quite full.",
+            "content_zh":"不啦，谢谢。我已经够饱了。"
+        },
+        {
+            "content_en":"Did you enjoy the meal?",
+            "content_zh":"您吃得怎么样？"
+        },
+        {
+            "content_en":"It's the most delicious dinner I've had for a long time. It's such a rich dinner.",
+            "content_zh":"好久没有吃过这样美味的饭莱了。这顿饭莱太丰盛了。"
+        },
+        {
+            "content_en":"I'm so glad you like it.",
+            "content_zh":"你能喜欢，我不胜荣幸。"
+        },
+        {
+            "content_en":"Thank you very much for your hospitality.",
+            "content_zh":"谢谢你的盛情款待。"
+        }
+        
+    ]
+}
+

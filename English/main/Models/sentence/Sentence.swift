@@ -19,7 +19,8 @@ class Sentence:NSObject, HomeProtocol {
         loadData()
         indexVue.v_index { (index) in
             print(index)
-            Router.push(SentenceDetails().getViewController(), ["id":"10"], nil)
+            
+            Router.push(SentenceDetails().getViewController(), ["id":index + 1], nil)
         }
         
     }
@@ -28,7 +29,7 @@ class Sentence:NSObject, HomeProtocol {
         
         let vc = HomeVC()
         vc.m = self
-        vc.navigationItem.title = "例句"
+        vc.navigationItem.title = "消息"
         return vc
         
     }

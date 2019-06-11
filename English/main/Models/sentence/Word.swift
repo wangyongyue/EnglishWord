@@ -1,42 +1,46 @@
 //
-//  Article.swift
+//  Word.swift
 //  English
 //
-//  Created by apple on 2019/6/10.
+//  Created by apple on 2019/6/11.
 //  Copyright © 2019 wyy. All rights reserved.
 //
 
 import UIKit
 import VueSwift
-
-class Article:NSObject, HomeProtocol {
+class Word: NSObject, BottomViewProtocol {
+    
     var arrayVue: Vue = Vue()
     var indexVue: Vue = Vue()
-    
+    var tapVue: Vue   = Vue()
+    var word:String?
+
     func startListen() {
         
         
         loadData()
         
         indexVue.v_index { (index) in
-            Router.push(ArticleDetails().getViewController(), ["id":index + 1], nil)
+            
             
         }
         
+        
     }
     
-    func getViewController() -> UIViewController {
+    func getView(){
         
-        let vc = HomeVC()
-        vc.m = self
-        vc.navigationItem.title = "短文"
-        return vc
-        
+        let v = BottomView(m:self)
+        let window = UIApplication.shared.keyWindow
+        if let w = window{
+            w.addSubview(v)
+        }
+                
     }
     
     func loadData(){
         
-        let data  = Resources.getArrayForJson("article")
+        let data  = Resources.getArrayForJson("sentence")
         
         var array = Array<VueData>()
         for value in data{
@@ -51,6 +55,7 @@ class Article:NSObject, HomeProtocol {
             
             return array
         })
+        
         
     }
     

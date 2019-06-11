@@ -1,14 +1,14 @@
 //
-//  Style02.swift
+//  LeftCell.swift
 //  English
 //
-//  Created by apple on 2019/6/10.
+//  Created by apple on 2019/6/11.
 //  Copyright © 2019 wyy. All rights reserved.
 //
 
 import UIKit
 import VueSwift
-class Style02: UITableViewCell,CellProtocol {
+class LeftCell: UITableViewCell,CellProtocol {
     
     let label:UILabel = {
         let a = UILabel()
@@ -29,10 +29,10 @@ class Style02: UITableViewCell,CellProtocol {
         
         label.numberOfLines = 0
         label.snp.makeConstraints { (make) in
-            make.top.equalTo(12)
+            make.top.equalTo(0)
             make.left.equalTo(12)
-            make.right.equalTo(-12)
-            make.bottom.equalTo(-40)
+            make.right.equalTo(-50)
+            make.bottom.equalTo(-6)
             
         }
         
@@ -48,9 +48,9 @@ class Style02: UITableViewCell,CellProtocol {
     }
     func setModel(_ amodel: VueData) {
         
-        if amodel is Style02Model{
+        if amodel is LeftModel{
             
-            let h = amodel as! Style02Model
+            let h = amodel as! LeftModel
             
             textVue.v_text { () -> String? in
                 
@@ -60,15 +60,16 @@ class Style02: UITableViewCell,CellProtocol {
             tapVue.v_on {
                 h.v_identifier = 0
                 h.v_selectVue.v_on?()
+                
             }
             
         }
     }
     
 }
-class Style02Model:VueData{
+class LeftModel:VueData{
     
-    var v_palm: String = "Style02"
+    var v_palm: String = "LeftCell"
     var v_identifier:Int = 0
     var v_selectVue:Vue = Vue()
     

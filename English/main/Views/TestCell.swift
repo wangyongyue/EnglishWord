@@ -33,10 +33,10 @@ class TestCell: UICollectionViewCell,CellProtocol{
         label.numberOfLines = 0
         
         label.snp.makeConstraints { (make) in
-            make.top.equalTo(6)
+            make.top.equalTo(3)
             make.left.equalTo(0)
-            make.right.equalTo(-6)
-            make.bottom.equalTo(-2)
+            make.right.equalTo(0)
+            make.bottom.equalTo(0)
             
         }
         
@@ -51,9 +51,9 @@ class TestCell: UICollectionViewCell,CellProtocol{
 
         let size = self.contentView.systemLayoutSizeFitting(layoutAttributes.size)
         var cellFrame = layoutAttributes.frame
-        cellFrame.size.height = 50
-        if let count = label.text?.count{
-            cellFrame.size.width = CGFloat(count) * 12.0
+        cellFrame.size.height = 25
+        if let text = label.text,let font = label.font{
+            cellFrame.size.width = text.getWithForString(font:font) + 5
         }
         layoutAttributes.frame = cellFrame
         return layoutAttributes
@@ -74,9 +74,27 @@ class TestCell: UICollectionViewCell,CellProtocol{
                 return h.name
             }
             
-            tapVue.v_on {
-                h.v_identifier = 0
-                h.v_selectVue.v_on?()
+            tapVue.v_on {[weak self] in
+                self?.label.textColor = UIColor.red
+                
+//                let w = Word()
+//                w.word = h.name
+//                w.tapVue.v_on(vue: {
+//
+//                    self?.label.textColor = UIColor.black
+//                })
+//                w.getView()
+
+                
+                let w = WordWeb()
+                w.word = h.name
+                w.tapVue.v_on(vue: {
+                    
+                    self?.label.textColor = UIColor.black
+                })
+                w.getView()
+
+                
             }
             
         }
